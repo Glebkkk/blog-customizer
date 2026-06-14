@@ -1,19 +1,20 @@
-import { CSSProperties } from 'react';
+import { CSSProperties, useState } from 'react';
 import clsx from 'clsx';
 
 import { Article } from '../article/Article';
 import { ArticleParamsForm } from '../article-params-form/ArticleParamsForm';
-import { ArticleStateType, defaultArticleState } from './../../constants/articleProps';
-import { useState } from 'react';
+import {
+	ArticleStateType,
+	defaultArticleState,
+} from './../../constants/articleProps';
 
 import styles from './app.module.scss';
 
 export const App = () => {
-
 	const [appliedState, setAppliedState] = useState(defaultArticleState);
 
 	const handleApply = (newState: ArticleStateType) => {
-  		setAppliedState(newState);
+		setAppliedState(newState);
 	};
 
 	return (
